@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Aplikasi Kasir &nbsp;|&nbsp; Waroeng Goeboek</title>
+
+	<!-- CSS's Files -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/gsl-adstyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+
+	<!-- Font's Files -->
+	<link href="../fonts/exo_2.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
+
+	<!-- Favicon's File -->
+	<link rel="shortcut icon" type="image/x-icon" href="../images/logo.png">
+
+</head>
+<body>
+	<nav class="navbar navbar-login navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><span>Waroeng</span>Goeboek</a>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="col-md-8 col-md-offset-2 main-page">
+		<div class="login-card"><img class="img-responsive profile-img-card" src="../images/joukor.png">
+			<p class="text-center auth-info-card"> </p>
+			<form class="form-signin" method="POST" action="admin/login">
+				<input class="form-control" type="email" name="email" required="" placeholder="Email address" autofocus="" id="inputEmail">
+				<input class="form-control" type="password" name="password" required="" placeholder="Password" id="inputPassword">
+				<button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Masuk</button>
+			</form>
+		</div>
+	</div><!-- .main -->
+
+
+	<!-- JQuery's Files -->
+	<script src="../jquery/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

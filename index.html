@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Aplikasi Kasir &nbsp;|&nbsp; Waroeng Goeboek</title>
+
+  <!-- CSS's Files -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="dataTables/datatables.min.css">
+  <link rel="stylesheet" type="text/css" href="css/halaman-kasir.css">
+
+  <!-- Font's Files -->
+  <link href="fonts/exo_2.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+  <!-- Favicon's File -->
+  <link rel="shortcut icon" type="../image/x-icon" href="images/logo.png">
+
+</head>
+<body>
+  <nav class="navbar navbar-kasir navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span>Waroeng</span>Goeboek</a>
+          <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown"><a class="dropdown-toggle logout" href="#">
+              <em class="fa fa-power-off"></em>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="col-xs-12 col-lg-12 main" style="margin-top: 20px;">
+	<div class="panel panel-controller">
+		<!-- Transaksi Penjualan -->
+		<h2 align="center" class="transaksi" >Transaksi Penjualan</h2>
+		<hr class="line-home" color="#33accc" width="300px;">
+		<br/>
+
+		<div class="row"> <!-- .row Proses Transaksi -->
+			<div class="col-xs-6 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4>Data Transaksi</h4>
+						<form role="form">
+							<fieldset disabled>
+								<div class="form-group" width="100%">
+									<label for="disabledSelect">Data Transaksi</label>
+									<input class="form-control" id="disabledInput" type="text" disabled>
+								</div>
+								<div class="form-group input-group">
+									<label for="disabledSelect">Tanggal Transaksi</label>
+									<input class="form-control" id="disabledInput" type="text" disabled>
+								</div>
+								<div class="form-group input-group">
+									<label for="disabledSelect">Petugas Kasir</label>
+									<input class="form-control" id="disabledInput" type="text" disabled>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h4>Input Menu</h4>
+						<form role="form">
+							<fieldset>
+								<div class="form-group input-group">
+									<label>Kode Menu</label>
+									<input class="form-control" placeholder="Masukkan Kode">
+								</div>
+								<div class="form-group input-group">
+									<label>Pilih Menu</label>
+									<select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group" input-group>
+									<label>Disc(%)</label>
+									<input class="form-control">
+								</div>
+								<div class="form-group input-group">
+									<label>Jumlah Pesanan</label>
+									<input class="form-control" placeholder="Masukkan Jumlah Pesanan" required>
+								</div>
+								<button type="submit" class="btn btn-success">Tambah Menu</button>
+							</fieldset>
+						</form>
+					</div> 
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<table class="table table-bordered table-hover table-striped" id="datatables">
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>Kode</th>
+									<th>Nama Menu</th>
+									<th>Harga</th>
+									<th>Disc (%)</th>
+									<th>Qty</th>
+									<th>SubTotal</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center" width="7%"></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td width="10%"></td>
+									<td width="10%"></td>
+									<td></td>
+									<td align="center" width="5%">
+										</a>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="5" align="right"><b>Total Bayar (Rp.)</b></td>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+								<tr>
+									<td colspan="5" align="right"><b>Bayar (Rp.)</b></td>
+									<th></th>
+									<th></th>
+									<td align="center" width="200px">
+										<button class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+									</td>
+
+								</tr>
+								<tr>
+									<td colspan="5" align="right"><b>Uang Kembali (Rp.)</b></td>
+									<th></th>
+									<th></th>
+									<th></th>
+								</tr>
+							</tfoot>
+						</table>
+						<a href="" target="_blank" class="btn btn-default btn-cetak"><em class="fa fa-print"></em> Cetak Struk</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- .row-->
+	</div><!-- .main -->
+ 
+
+  <!-- JQuery's Files -->
+  <script src="jquery/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="jquery/jquery.hotkeys.js"></script>
+  <script type="text/javascript">
+	Mousetrap.bind('ctrl+i', function(e) {
+    _saveDraft();
+});
+  </script>
+</body>
+</html>

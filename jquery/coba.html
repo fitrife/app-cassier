@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajarphp.net</title>
+
+    </head>
+<script src="jquery.hotkeys/jquery-1.4.2.js"></script>
+<script src="jquery.hotkeys/jquery.hotkeys.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    $(document).bind('keydown', 'ctrl+b', function() {
+        document.getElementById("tambah_yuk").click();
+    });
+    $(document).bind('keydown', 'f3', function() {
+        alert('Clear Data');
+    });
+});
+</script>
+    <body>
+        <button type="button" id="save">SAVE [F2]</button>
+        <button type="button">CLEAR [F3]</button>
+        <button id="tambah_yuk" type="button" onclick="alert('hayo')">Tambah</button>
+    </body>
+ 
+</html>
